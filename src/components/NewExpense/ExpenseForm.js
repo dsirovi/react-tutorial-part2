@@ -46,7 +46,7 @@ const ExpenseForm = (props) => {
        enteredDate: event.target.value
 
      });*/
-    console.log('Date change')
+    console.log('Date change ' + event.target.value )
   };
 
   const submitHandler = (event) => {
@@ -55,7 +55,7 @@ const ExpenseForm = (props) => {
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
-      date: new Date(enteredDate)
+      date: new Date(enteredDate + 'T00:00:00')
     }
 
     props.onASveExpenseData(expenseData);
